@@ -4,6 +4,9 @@
     <headerA>
 
     </headerA>
+      <menuDrawerA>
+
+    </menuDrawerA>
     <v-content class="grey lighten-5">
 
     </v-content>
@@ -15,6 +18,7 @@
 
 <script>
   import headerA from './components/header';
+  import menuDrawerA from './components/menudrawer.vue';
   import footerA from './components/footer';
 
 export default {
@@ -23,6 +27,7 @@ export default {
   components: {
       headerA,
       footerA,
+      menuDrawerA
     },
   data: () => ({
     //

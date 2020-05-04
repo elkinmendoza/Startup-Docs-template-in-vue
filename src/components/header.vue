@@ -26,28 +26,38 @@
       <v-spacer></v-spacer>
 
           <v-btn class="ma-2" outlined color="deep-purple">Get Started</v-btn>
-      <v-app-bar-nav-icon class="hidden-md-and-up"></v-app-bar-nav-icon>
-
-
-
+      <v-app-bar-nav-icon class="hidden-md-and-up" @click.stop="handleDrawer()"></v-app-bar-nav-icon>
 
     </v-app-bar>
 
 </template>
 
 <script>
+import { EventBus } from '../main';
 
 export default {
   name: 'headerA',
 
   components: {
   },
-
   data: () => ({
+
+    drawer: null,
+        items: [
+          { title: 'Home', icon: 'dashboard' },
+          { title: 'About', icon: 'question_answer' },
+        ],
     //
   }),
   methods:{
+       handleDrawer(){
 
+         
+          EventBus.$emit('turnDrawer');
+
+           
+
+      }
   },
   computed:{
 
